@@ -1,0 +1,13 @@
+{{> header}}
+<div class="container">
+    <div class="row " style="margin-left: 20px">
+        {{#each types}}
+        <a href="/shop/{{this.type}}/detailType">
+            <div class="card" style="width: 20rem;">
+                <img src="images/{{this.image}}" alt="Card image cap">       
+                <h3>{{this.type}}</h3>             
+            </div>
+        </a>
+        {{/each}}
+    </div>
+</div>

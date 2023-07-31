@@ -1,0 +1,13 @@
+{{>header}}
+<div class="container mt-4">
+    <div class="row" >
+        {{#each shop}}
+            <div class="card detail" style="width: 18rem;">
+                <img src="/images/{{this.image}}" alt="Card image cap">
+                <h3>{{this.name}}</h3>
+                <h4>{{this.price}}</h4>
+            </div>
+         {{/each}}
+       
+    </div>
+</div>
