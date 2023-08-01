@@ -4,8 +4,12 @@ const Type = require('../models/type');
 class ShopController{
     // [GET] /shop/create
     create(req,res,next){
-       res.render('shop/create')
+      Type.find({}).lean()
+        .then(types => res.render('shop/create',{types}))
+        .catch(next);
+       
     }
+        
 
     //[GET] /shop/:id/edit
     edit(req,res,next){

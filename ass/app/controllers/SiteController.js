@@ -3,7 +3,7 @@ const Type = require('../models/type');
 const { mutilpleMongooseToObject, multipleMongooseToObject } = require('../../util/mongoose')
 class SiteController{
     home(req,res,next){
-        // res.render('home');
+       
         Type.find({}).lean()
             .then(types => {
                 res.render('home', {
@@ -15,7 +15,7 @@ class SiteController{
     }
 
     api(req,res,next){
-        // res.render('home');
+       
         Type.find({})
             .then(types => {
                 res.json(types)

@@ -9,17 +9,15 @@
       </div>
 
       <div class="form-group">
+
         <label for="type">Loại sản phẩm</label>  
         <select id="type" name="type" class="form-control">
-          <option selected>Choose...</option>
-          <option value="Samsung">Samsung</option>
-          <option value="Iphone">Iphone</option>
-          <option value="Oppo">Oppo</option>
-          <option value="Vivo">Vivo</option>
-          <option value="xiaomi">Xiaomi</option>
+           <option selected>Choose...</option>
+           {{#each types}}
+            <option value="{{this.type}}">{{this.type}}</option>
+           {{/each}}
         </select>
        </div>
-
       <div class="form-group">
         <label for="price">Giá</label>
         <input type="text" class="form-control" id="price" name="price">
@@ -37,4 +35,6 @@
       </div>
       <button type="submit" class="btn btn-primary">ADD</button>
     </form>
+   
 </div>
+

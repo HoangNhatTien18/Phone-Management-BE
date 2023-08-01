@@ -135,10 +135,15 @@ h2{
 }
 
 /*-------------------Card details----------------*/
-
 .card.detail{
   border: none;
-  
+}
+.card.detail img{
+
+  transition: transform .2s
+}
+.card.detail img:hover{
+  transform: scale(1.1);
 }
 .card.detail h3{
   margin-top: 30px;
