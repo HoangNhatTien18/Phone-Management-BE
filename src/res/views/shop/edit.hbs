@@ -1,37 +1,36 @@
 {{> header}}
 <div class="container mt-4">
-    <h1>Thêm Sản Phẩm</h1>
+    <h1>Chỉnh sửa Sản Phẩm</h1>
     <form method="POST" action="/shop/store" enctype="multipart/form-data">
       <div class="form-group">
         <label for="name">Tên sản phẩm</label>  
-        <input type="text" class="form-control" id="name" name="name" >
-       
+        <input type="text" class="form-control" value="{{shop.name}}" id="name" name="name" >
       </div>
 
       <div class="form-group">
-
         <label for="type">Loại sản phẩm</label>  
         <select id="type" name="type" class="form-control">
-           <option selected>Choose...</option>
-           {{#each types}}
-            <option value="{{this.type}}">{{this.type}}</option>
-           {{/each}}
+           <option selected>{{shop.type}}</option>
+            {{#each types}}
+              <option value="{{this.type}}">{{this.type}}</option>
+            {{/each}}
         </select>
-       </div>
+      </div>
+
       <div class="form-group">
         <label for="price">Giá</label>
-        <input type="text" class="form-control" id="price" name="price">
+        <input type="text" class="form-control" value="{{shop.price}}" id="price" name="price">
       </div>
 
 
       <div class="form-group">
         <label for="imageUrl">ImageURL</label>
-        <input type="text" class="form-control" id="imageUrl" name="imageUrl">
+        <input type="text" class="form-control"  value="{{shop.imageUrl}}" id="imageUrl" name="imageUrl">
       </div>
 
       <div class="form-group">
         <label for="image">Hình ảnh</label>
-        <input type="file" class="form-control-file" name="image" id="image">
+        <input type="file" class="form-control-file"  value="{{shop.image}}" name="image" id="image">
       </div>
       <button type="submit" class="btn btn-primary">ADD</button>
     </form>

@@ -16,9 +16,9 @@ class SiteController{
 
     api(req,res,next){
        
-        Type.find({})
-            .then(types => {
-                res.json(types)
+        Shop.find({})
+            .then(shops => {
+                res.json(shops)
             })
             .catch(next)
       

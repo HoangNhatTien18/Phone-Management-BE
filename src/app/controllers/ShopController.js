@@ -13,10 +13,10 @@ class ShopController{
 
     //[GET] /shop/:id/edit
     edit(req,res,next){
-        
         Shop.findById(req.params.id).lean()
             .then(shop => res.render('shop/edit', {shop}))
-            .catch(next)
+            .catch(next);
+       
     }
 
      //[PUT] /shop/:id

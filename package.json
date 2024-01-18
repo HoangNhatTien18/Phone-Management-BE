@@ -19,8 +19,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect ass/index.js",
-    "watch": "node-sass --watch ./ass/res/scss/app.scss ./ass/public/css/app.css"
+    "start": "nodemon --inspect src/index.js",
+    "watch": "node-sass --watch ./src/res/scss/app.scss ./ass/public/css/app.css"
   },
   "author": "",
   "license": "ISC",
